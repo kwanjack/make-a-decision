@@ -57,7 +57,7 @@ class App extends Component {
     const ONE_MINUTE = 1000 * 60;
 
     let minutesLeft = diff / ONE_MINUTE;
-    let secondsLeft = (diff % ONE_MINUTE) % 60;
+    let secondsLeft = (diff % ONE_MINUTE) / 1000;
 
     return `${Math.floor(minutesLeft)} MINUTES ${Math.floor(secondsLeft)} SECONDS LEFT UNTIL ${END_TIME_LOCALE_STRING}`;
   }
